@@ -1,5 +1,5 @@
 pipeline {
-    agent { dockerfile { additionalBuildArgs "-v tcp://127.0.0.1:2376:/var/run/docker.sock"} }
+    agent { dockerfile { args "-v tcp://127.0.0.1:2376:/var/run/docker.sock"} }
     stages {
         stage('Publish') {
             steps {
